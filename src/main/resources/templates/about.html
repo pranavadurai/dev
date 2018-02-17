@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: header">
+<body>
+
+<div th:replace="common/nav :: navbar" ></div>
+
+<div class="container">
+
+    <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron">
+                    <h1 class="text-center"> Pranavadurai</h1>
+                    <p class="lead"> THis  is just an about us page to display the about me </p>
+                </div>
+            </div>
+    </div>
+    
+     <div class="row">
+            <div class="col-lg-4 span4">
+                    <img class="img-circle"
+                         th:src="@{/images/PRANAVADURAI.jpg}"
+                         alt="Pranavadurai" width="140" height="140" />
+                <h2>Pranavadurai <small class="member-title">Developer</small></h2>
+                <div class="span4 collapse-group">
+                    <p class="collapse text-justify">Developer</p>
+                    <p><a class="btn btn-primary btn-collapse" href="#" role="button">Click here</a></p>
+                </div>
+            </div>                        
+</div>
+</div>
+<div th:replace="common/header :: footer" > </div>
+</body>
+</html>
