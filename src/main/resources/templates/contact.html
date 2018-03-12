@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="common/header :: header">
+<body>
+
+<div th:replace="common/nav :: navbar" ></div>
+
+<div class="container">
+
+    <div class = "row">
+        <div class = "col-md-6 col-md-offset-3">
+            <div class = "well">
+               <div class = "text-center">
+                 <h1>Contact Us</h1>
+                 <form id = "contactform" th:action="@{contact}" th:object="${contact}" method ="post">
+                 
+                   <div class ="form-group">
+                       <label for ="email">Email:</label>
+                       <input type ="email" id="email" th:field = "*{email}" class = "form-control"/>                    
+                   </div>
+                   <div class ="form-group">
+                       <label for ="fname">First Name:</label>
+                       <input type ="text" id="fname" th:field = "*{firstName}" class = "form-control"/>                    
+                   </div>
+                   <div class ="form-group">
+                       <label for ="lname">Last Name:</label>
+                       <input type ="text" id="lname" th:field = "*{lastName}" class = "form-control"/>                    
+                   </div>
+                   <div class ="form-group">
+                       <label for ="feedback">Feedback:</label>
+                       <textarea id="feedback" th:field = "*{feedback}" class = "form-control"></textarea>                    
+                   </div>
+                   <div class ="form-group">
+                       <button type = "submit" class ="btn btn-primary">Submit</button>
+                   </div>
+                   
+                 </form>
+               </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div th:replace="common/header :: footer" > </div>
+</body>
+</html>
